@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cho'ice~World</title>
+ <link rel="icon" type="image/x-icon" href="/images/Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-page">
+
+  
+    <div class="auth-corner-actions">
+        <button id="rtlBtn" class="icon-btn" aria-label="Toggle RTL"><i class="fa-solid fa-right-left"></i></button>
+        <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+
+    <div class="auth-wrap reverse">
+
+       
+        <div class="auth-form-side">
+            <div class="auth-form-card">
+
+                <a href="/index.html" class="logo">
+                    <img src="images/logo.png" alt="Cho'ice~World">
+                    <div class="logo-text">
+                        <h2>Cho'ice~World</h2>
+                        <span>Ice Cream & Milkshakes</span>
+                    </div>
+                </a>
+
+                <span class="auth-eyebrow">Sign Up</span>
+                <h1>Create Your Account</h1>
+                <p class="auth-sub">Join us for member deals, faster checkout, and order history.</p>
+
+                <form class="auth-form" id="signupForm">
+
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <div class="input-icon-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="signup-name" name="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <div class="input-icon-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="signup-email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="input-icon-wrap">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+                            <button type="button" class="toggle-pw" data-target="signup-password" aria-label="Show password">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="pw-strength" id="pwStrength">
+                            <div class="pw-strength-bar"><span id="pwStrengthFill"></span></div>
+                            <span class="pw-strength-label" id="pwStrengthLabel">Password strength</span>
+                        </div>
+                    </div>
+
+                    <label class="checkbox-wrap terms-check">
+                        <input type="checkbox" name="terms" required>
+                        <span class="custom-checkbox"></span>
+                        I agree to the <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+                    </label>
+
+                    <button type="submit" class="auth-submit-btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Create Account
+                    </button>
+
+                </form>
+
+                <div class="auth-divider"><span>or sign up with</span></div>
+
+                <div class="auth-social-row">
+                    <button type="button" class="social-btn">
+                        <i class="fa-brands fa-google"></i> Google
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fa-brands fa-apple"></i> Apple
+                    </button>
+                </div>
+
+                <p class="auth-switch">
+                    Already have an account? <a href="login.html">Login</a>
+                </p>
+
+            </div>
+        </div>
+
+       
+        <div class="auth-visual">
+            <img class="auth-visual-bg" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1200&q=80" alt="">
+            <div class="auth-visual-overlay"></div>
+
+            <div class="auth-visual-content">
+                <span class="auth-visual-tag"><i class="fa-solid fa-gift"></i> Join The Club</span>
+                <h2>Sweet Perks Start<br>Right Here</h2>
+                <p>Sign up today and get 10% off your first order, plus early access to seasonal flavours.</p>
+
+                <ul class="auth-visual-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Exclusive member discounts</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Track orders in real time</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Early access to new flavours</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="auth-toast" id="authToast">
+    <i class="fa-solid fa-circle-check"></i>
+    <div>
+        <strong>Account Created!</strong>
+        <p>Welcome to Cho'ice~World.</p>
+    </div>
+    <button class="toast-close" id="authToastClose"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

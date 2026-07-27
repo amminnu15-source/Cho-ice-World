@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cho'ice~World</title>
+ <link rel="icon" type="image/x-icon" href="/images/Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Baloo+2:wght@500;600;700&family=Pacifico&family=Lobster&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="./pricing.css">
+<link rel="stylesheet" href="/nav.css">
+<link rel="stylesheet" href="/footer.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<nav class="navbar">
+
+
+
+<a href="/index.html" class="logo">
+
+<img src="/images/Logo.png" alt="Cho'ice~World">
+
+<div class="logo-text">
+
+<h2>Cho'ice~World</h2>
+
+<span>Ice Cream & Milkshakes</span>
+
+</div>
+
+</a>
+
+
+
+<ul class="nav-menu">
+
+<li class="dropdown">
+
+<a href="/index.html">
+Home
+<i class="fa-solid fa-chevron-down"></i>
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="/index.html">Home Classic</a></li>
+
+<li><a href="/home-2/home-2.html">Home Modern</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="/about/about.html">About</a></li>
+
+<li><a href="/Services.html">Services</a></li>
+
+<li><a href="/pricing/pricing.html">Pricing</a></li>
+
+<li><a href="/Blog.html">Blog</a></li>
+
+<li><a href="/contact/contact.html">Contact</a></li>
+
+
+
+</ul>
+
+
+
+<div class="nav-actions">
+
+
+
+<button id="rtlBtn" class="icon-btn">
+    <i class="fa-solid fa-right-left"></i>
+</button>
+
+
+
+<button id="themeBtn" class="icon-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+
+
+<a href="/login.html" class="login-btn">
+
+<i class="fa-regular fa-user"></i>
+
+Login
+
+</a>
+
+
+
+<div class="hamburger">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<section class="pricing-banner">
+    <img class="pricing-banner-bg" src="/images/pricing-hero.png" alt="">
+    <div class="pricing-banner-overlay"></div>
+
+    <div class="container pricing-banner-inner">
+        <span class="pb-eyebrow"><i class="fa-solid fa-tags"></i> Pricing Plans</span>
+        <h1 class="pb-title">Simple, Sweet Pricing <span>for Everyone</span></h1>
+        <p class="pb-sub">No hidden charges, no surprises — just honest pricing for handcrafted ice creams and milkshakes.</p>
+
+        <div class="pb-breadcrumb">
+            <a href="/index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Pricing</span>
+        </div>
+    </div>
+</section>
+
+
+<section class="pricing-plans">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="sh-eyebrow"><i class="fa-solid fa-ice-cream"></i> Choose Your Plan</span>
+            <h2 class="sh-title">Plans Made For Every <span>Sweet Tooth</span></h2>
+            <p class="sh-sub">Pick a plan that fits your cravings — switch or cancel anytime.</p>
+        </div>
+
+        <div class="billing-toggle">
+            <span class="billing-label active" data-period="monthly">Monthly</span>
+            <button class="toggle-switch" id="billingToggle" aria-label="Toggle yearly billing">
+                <span class="toggle-knob"></span>
+            </button>
+            <span class="billing-label" data-period="yearly">Yearly <em>Save 20%</em></span>
+        </div>
+
+        <div class="plans-grid">
+
+          
+            <div class="plan-card">
+                <div class="plan-head">
+                    <h3>Sweet Starter</h3>
+                    <p>Perfect for the occasional treat</p>
+                </div>
+                <div class="plan-price-row">
+                    <span class="plan-currency">&#8377;</span>
+                    <span class="plan-price" data-monthly="299" data-yearly="2870">299</span>
+                    <span class="plan-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-circle-check"></i> 2 scoops every week</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Access to classic flavours</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Standard home delivery</li>
+                    <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Priority support</li>
+                    <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Exclusive seasonal flavours</li>
+                </ul>
+                <a href="/signup.html" class="plan-btn plan-btn-outline">Choose Starter</a>
+            </div>
+
+         
+            <div class="plan-card popular">
+                <span class="popular-badge"><i class="fa-solid fa-star"></i> Most Popular</span>
+                <div class="plan-head">
+                    <h3>Family Delight</h3>
+                    <p>Our most loved everyday plan</p>
+                </div>
+                <div class="plan-price-row">
+                    <span class="plan-currency">&#8377;</span>
+                    <span class="plan-price" data-monthly="599" data-yearly="5750">599</span>
+                    <span class="plan-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-circle-check"></i> 6 scoops every week</li>
+                    <li><i class="fa-solid fa-circle-check"></i> All classic + premium flavours</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Free priority delivery</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 1 free milkshake monthly</li>
+                    <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Exclusive seasonal flavours</li>
+                </ul>
+                <a href="/signup.html" class="plan-btn plan-btn-solid">Choose Family</a>
+            </div>
+
+           
+            <div class="plan-card">
+                <div class="plan-head">
+                    <h3>Premium Indulgence</h3>
+                    <p>For true dessert enthusiasts</p>
+                </div>
+                <div class="plan-price-row">
+                    <span class="plan-currency">&#8377;</span>
+                    <span class="plan-price" data-monthly="999" data-yearly="9590">999</span>
+                    <span class="plan-period">/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Unlimited scoops weekly</li>
+                    <li><i class="fa-solid fa-circle-check"></i> All flavours, always</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Free same-day delivery</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 4 free milkshakes monthly</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Exclusive seasonal flavours</li>
+                </ul>
+                <a href="/signup.html" class="plan-btn plan-btn-outline">Choose Premium</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="pricing-compare">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="sh-eyebrow"><i class="fa-solid fa-scale-balanced"></i> Compare Plans</span>
+            <h2 class="sh-title">See What's <span>Included</span></h2>
+            <p class="sh-sub">A quick side-by-side so you know exactly what you're getting.</p>
+        </div>
+
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th class="feature-col">Features</th>
+                        <th>Sweet Starter</th>
+                        <th class="highlight-col">Family Delight</th>
+                        <th>Premium Indulgence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-col">Weekly scoops</td>
+                        <td>2</td>
+                        <td class="highlight-col">6</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Flavour access</td>
+                        <td>Classic only</td>
+                        <td class="highlight-col">Classic + Premium</td>
+                        <td>All + Seasonal</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Free delivery</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td class="highlight-col"><i class="fa-solid fa-check tick"></i></td>
+                        <td><i class="fa-solid fa-check tick"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Free monthly milkshakes</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td class="highlight-col">1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Priority support</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td class="highlight-col"><i class="fa-solid fa-check tick"></i></td>
+                        <td><i class="fa-solid fa-check tick"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="feature-col">Cancel anytime</td>
+                        <td><i class="fa-solid fa-check tick"></i></td>
+                        <td class="highlight-col"><i class="fa-solid fa-check tick"></i></td>
+                        <td><i class="fa-solid fa-check tick"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="pricing-testimonials">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="sh-eyebrow"><i class="fa-solid fa-heart"></i> Loved By Members</span>
+            <h2 class="sh-title">What Our <span>Members Say</span></h2>
+            <p class="sh-sub">Real reviews from real dessert lovers on their favorite plan.</p>
+        </div>
+
+        <div class="testi-grid">
+
+            <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"The Family Delight plan is such good value — my kids get their weekly ice cream fix and I never have to think about it."</p>
+                <div class="testi-user">
+                    <img src="/images/testi-1.png" alt="Ananya Sharma">
+                    <div>
+                        <strong>Ananya Sharma</strong>
+                        <span>Family Delight Member</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Premium Indulgence is worth every rupee. Unlimited scoops and I always get first access to seasonal flavours."</p>
+                <div class="testi-user">
+                    <img src="/images/testi-2.png" alt="Rohan Mehta">
+                    <div>
+                        <strong>Rohan Mehta</strong>
+                        <span>Premium Member</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>"Started with Sweet Starter just to try it out, and I was hooked in a week. Upgrading to Family Delight next month!"</p>
+                <div class="testi-user">
+                    <img src="/images/testi-3.png" alt="Priya Nair">
+                    <div>
+                        <strong>Priya Nair</strong>
+                        <span>Sweet Starter Member</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="pricing-faq">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="sh-eyebrow"><i class="fa-solid fa-circle-question"></i> Got Questions?</span>
+            <h2 class="sh-title">Frequently Asked <span>Questions</span></h2>
+            <p class="sh-sub">Everything you need to know before choosing a plan.</p>
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item active">
+                <button class="faq-question">
+                    Can I cancel my plan anytime?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes — every plan is fully flexible. You can cancel, pause, or switch plans anytime from your account with no cancellation fees.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What happens if I don't use all my scoops?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Unused scoops roll over for up to 2 weeks on Family Delight and Premium Indulgence plans, so nothing goes to waste.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is delivery really free on the higher plans?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, Family Delight and Premium Indulgence include completely free delivery on every order, with same-day delivery on Premium.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I switch between monthly and yearly billing?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. You can switch billing cycles at any time — yearly billing saves you roughly 20% compared to paying monthly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer a free trial?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>New members get their first week on Sweet Starter free, so you can try the service before committing to a paid plan.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="pricing-cta">
+    <img class="pricing-cta-bg" src="/images/pricing-cta.png" alt="">
+    <div class="pricing-cta-overlay"></div>
+
+    <div class="container pricing-cta-inner">
+       
+        <h2 class="cta-title">Ready to Treat Yourself Every Week?</h2>
+        <p class="cta-sub">Join thousands of members already enjoying handcrafted ice cream and milkshakes on a plan built around them.</p>
+        <div class="cta-actions">
+            <a href="/signup.html" class="cta-btn-solid"><i class="fa-solid fa-bag-shopping"></i> Get Started Today</a>
+            <a href="/contact/contact.html" class="cta-btn-outline">Talk to Us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-col footer-brand">
+
+                <a href="/index.html" class="logo">
+
+                    <img src="/images/Logo.png" alt="Cho'ice~World">
+
+                    <div class="logo-text">
+                        <h2>Cho'ice~World</h2>
+                        <span>Ice Cream & Milkshakes</span>
+                    </div>
+
+                </a>
+
+                <p class="footer-desc">
+                    Handcrafted ice creams and milkshakes made fresh daily with
+                    real fruit, premium cream, and a whole lot of love.
+                </p>
+
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+
+            </div>
+
+        
+            <div class="footer-col">
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="/home-2/home-2.html">Home</a></li>
+                    <li><a href="/about/about.html">About</a></li>
+                    <li><a href="/Services.html">Services</a></li>
+                       <li><a href="/comingsoon/comingsoon.html">Coming Soon</a></li>
+                    <li><a href="/error404/error404.html">404 Error</a></li>
+                </ul>
+
+            </div>
+
+          
+            <div class="footer-col">
+
+                <h3>Our Menu</h3>
+
+                <ul class="footer-links">
+                    <li><a href="/ServiceDetails.html?service=tubs">Ice Cream Tubs</a></li>
+                    <li><a href="/ServiceDetails.html?service=milkshakes">Milkshakes</a></li>
+                    <li><a href="/ServiceDetails.html?service=sundaes">Sundaes</a></li>
+                    <li><a href="/ServiceDetails.html?service=waffles">Waffles</a></li>
+                    <li><a href="/pricing/pricing.html">Pricing</a></li>
+                </ul>
+
+            </div>
+
+            
+            <div class="footer-col">
+
+                <h3>Get In Touch</h3>
+
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>12 Sweet Street, Hyderabad, IN</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@choiceworld.com</span>
+                    </li>
+                </ul>
+
+            </div>
+
+           
+            <div class="footer-col footer-newsletter">
+
+                <h3>Newsletter</h3>
+
+                <p>Get sweet deals and new flavor drops in your inbox.</p>
+
+                <form class="newsletter-form" id="newsletterForm">
+
+                    <input type="email" placeholder="Your email address" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+                <p class="newsletter-msg" id="newsletterMsg"></p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="copyright">
+                &copy; <span id="year"></span> <strong>Cho'ice~World</strong>. All Rights Reserved.
+            </p>
+
+            <ul class="footer-bottom-links">
+                <li><a href="/privacy/privacy.html">Privacy Policy</a></li>
+                <li><a href="/privacy/privacy.html">Terms of Service</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+  
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/footer.js"></script>
+<script src="./pricing.js"></script>
+ <script src="/nav.js"></script>
+
+    </body>
+    </html>

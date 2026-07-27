@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | Cho'ice~World - Ice Cream & Milkshakes</title>
+    
+     <link rel="icon" type="image/x-icon" href="images/Logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Baloo+2:wght@500;600;700&family=Pacifico&family=Lobster&display=swap" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="ServiceDetails.css">
+</head>
+
+<body>    
+<header class="header">
+
+<div class="container">
+
+<nav class="navbar">
+
+<!-- Logo -->
+
+<a href="index.html" class="logo">
+
+<img src="images/Logo.png" alt="Cho'ice~World">
+
+<div class="logo-text">
+
+<h2>Cho'ice~World</h2>
+
+<span>Ice Cream & Milkshakes</span>
+
+</div>
+
+</a>
+
+<!-- Navigation -->
+
+<ul class="nav-menu">
+
+<li class="dropdown">
+
+<a href="index.html">
+Home
+<i class="fa-solid fa-chevron-down"></i>
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="index.html">Home Classic</a></li>
+
+<li><a href="home-2/home-2.html">Home Modern</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="about/about.html">About</a></li>
+
+<li><a href="Services.html">Services</a></li>
+
+<li><a href="pricing/pricing.html">Pricing</a></li>
+
+<li><a href="Blog.html">Blog</a></li>
+
+<li><a href="contact/contact.html">Contact</a></li>
+
+
+
+</ul>
+
+<!-- Right Side -->
+
+<div class="nav-actions">
+
+<!-- RTL -->
+
+<button id="rtlBtn" class="icon-btn">
+    <i class="fa-solid fa-right-left"></i>
+</button>
+
+<!-- Theme -->
+
+<button id="themeBtn" class="icon-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<!-- Login -->
+
+<a href="login.html" class="login-btn">
+
+<i class="fa-regular fa-user"></i>
+
+Login
+
+</a>
+
+<!-- Mobile -->
+
+<div class="hamburger">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+    <main>
+        
+        <section class="detail-hero">
+            <div class="hero-bg-overlay"></div>
+            
+            
+            <div class="floating-deco deco-1" title="Top Left Floating Strawberry"><img src="images/strawberry-half.png" alt="Strawberry"></div>
+            <div class="floating-deco deco-2" title="Top Right Floating Ice Cream"><i class="fa-solid fa-ice-cream"></i></div>
+            <div class="floating-deco deco-3" title="Bottom Left Floating Heart"><i class="fa-solid fa-heart"></i></div>
+            <div class="floating-deco deco-4" title="Bottom Right Floating Strawberry"><img src="images/strawberry-half.png" alt="Strawberry"></div>
+
+            <div class="container relative-z">
+                
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li class="active" id="breadcrumbActive">Service Details</li>
+                    </ol>
+                </nav>
+
+                <div class="detail-hero-content text-center">
+                    <span class="hero-badge" id="serviceCategoryBadge">
+                        <i class="fa-solid fa-award"></i> Signature Selection
+                    </span>
+                    <h1 class="hero-title" id="serviceTitle">Service Details</h1>
+                    <p class="hero-desc" id="serviceTagline">
+                        Handcrafted with real ingredients, premium dairy, and meticulous artistry.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="service-main-details">
+            <div class="container">
+                <div class="details-grid">
+                    
+                    <div class="details-image-col">
+                        <div class="main-image-card">
+                            <img src="images/service-tubs.png" id="serviceMainImg" alt="Service Image">
+                            <div class="quality-stamp">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>100% Fresh & Authentic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="details-info-col">
+                        <span class="section-badge" id="serviceBadge">Overview</span>
+                        <h2 class="info-heading" id="serviceNameHeader">Premium Selection</h2>
+                        <p class="info-text" id="serviceLongDescription">
+                            Loading service details...
+                        </p>
+
+                        
+                        <div class="highlights-box">
+                            <h3><i class="fa-solid fa-star"></i> Key Highlights</h3>
+                            <ul class="highlights-list" id="highlightsList">
+                                
+                            </ul>
+                        </div>
+
+                        
+                        <div class="specs-grid">
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-leaf"></i></div>
+                                <div>
+                                    <span class="spec-label">Ingredients</span>
+                                    <strong class="spec-value" id="specIngredients">100% Pure Dairy & Real Fruits</strong>
+                                </div>
+                            </div>
+
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-gem"></i></div>
+                                <div>
+                                    <span class="spec-label">Quality Standard</span>
+                                    <strong class="spec-value" id="specQuality">Artisanal Small Batch</strong>
+                                </div>
+                            </div>
+
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-heart"></i></div>
+                                <div>
+                                    <span class="spec-label">Best For</span>
+                                    <strong class="spec-value" id="specBestFor">Parties, Family & Gifts</strong>
+                                </div>
+                            </div>
+
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div>
+                                    <span class="spec-label">Availability</span>
+                                    <strong class="spec-value" id="specAvailability">Daily Fresh Stock</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="prepare-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Craftsmanship</span>
+                    <h2 class="section-title">How We <span>Prepare</span> This</h2>
+                    <p class="section-subtitle">Our step-by-step commitment to delivering uncompromised taste and freshness.</p>
+                </div>
+
+                <div class="prepare-timeline" id="prepareTimeline">
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="pairings-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Chef's Recommendations</span>
+                    <h2 class="section-title">Flavor <span>Pairings</span> & Customization</h2>
+                    <p class="section-subtitle">Handpicked combination suggestions and topping pairings to elevate your dessert experience.</p>
+                </div>
+
+                <div class="pairings-grid" id="pairingsGrid">
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Transparent Value</span>
+                    <h2 class="section-title">Pricing & <span>Packages</span></h2>
+                    <p class="section-subtitle">Choose the perfect tier for individual cravings, family gatherings, or large events.</p>
+                </div>
+
+                <div class="pricing-grid" id="pricingGrid">
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Visual Delight</span>
+                    <h2 class="section-title">Gallery & <span>Event</span> Experience</h2>
+                    <p class="section-subtitle">A glance at our handcrafted dessert creations, live party counters, and happy moments.</p>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-badge">Got Questions?</span>
+                    <h2 class="section-title">Frequently <span>Asked</span> Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about ordering, dietary options, and delivery.</p>
+                </div>
+
+                <div class="accordion-container" id="faqAccordion">
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="detail-cta-section">
+            <div class="cta-overlay"></div>
+            
+            <div class="container relative-z">
+                <div class="cta-card text-center">
+                    <span class="cta-badge"><i class="fa-solid fa-cookie-bite"></i> Instant Satisfaction</span>
+                    <h2 class="cta-title" id="ctaHeading">Ready to Taste Pure <span>Happiness</span>?</h2>
+                    <p class="cta-desc">
+                        Order online for home delivery or contact our team for custom event catering and corporate orders.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="tel:+919876543210" class="btn-primary">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Order Now
+                        </a>
+                        <a href="Services.html#bulk-cta" class="btn-secondary">
+                            View All Services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <!-- Brand Column -->
+            <div class="footer-col footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <img src="images/Logo.png" alt="Cho'ice~World">
+
+                    <div class="logo-text">
+                        <h2>Cho'ice~World</h2>
+                        <span>Ice Cream & Milkshakes</span>
+                    </div>
+
+                </a>
+
+                <p class="footer-desc">
+                    Handcrafted ice creams and milkshakes made fresh daily with
+                    real fruit, premium cream, and a whole lot of love.
+                </p>
+
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="home-2/home-2.html">Home</a></li>
+                    <li><a href="about/about.html">About</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact/contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+
+                <h3>Our Menu</h3>
+
+                <ul class="footer-links">
+                    <li><a href="ServiceDetails.html?service=tubs">Ice Cream Tubs</a></li>
+                    <li><a href="ServiceDetails.html?service=milkshakes">Milkshakes</a></li>
+                    <li><a href="ServiceDetails.html?service=sundaes">Sundaes</a></li>
+                    <li><a href="ServiceDetails.html?service=waffles">Waffles</a></li>
+                    <li><a href="pricing/pricing.html">Pricing</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+
+                <h3>Get In Touch</h3>
+
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>12 Sweet Street, Hyderabad, IN</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@choiceworld.com</span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col footer-newsletter">
+
+                <h3>Newsletter</h3>
+
+                <p>Get sweet deals and new flavor drops in your inbox.</p>
+
+                <form class="newsletter-form" id="newsletterForm">
+
+                    <input type="email" placeholder="Your email address" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+                <p class="newsletter-msg" id="newsletterMsg"></p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="copyright">
+                &copy; <span id="year"></span> <strong>Cho'ice~World</strong>. All Rights Reserved.
+            </p>
+
+            <ul class="footer-bottom-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+</footer>
+
+    
+    <script src="nav.js"></script>
+    <script src="footer.js"></script>
+    <script src="ServiceDetails.js"></script>
+</body>
+
+</html>
