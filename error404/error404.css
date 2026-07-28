@@ -70,7 +70,81 @@ LOGO + CORNER ACTIONS
 }
 
 .e404-logo .logo-text span{
-    display:none;
+     font-family:'Poppins', sans-serif;
+
+       font-size:12px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    opacity:.85;
+
+}
+
+
+/* ==========================
+   Responsive Logo Text
+========================== */
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+    .e404-logo .logo-text span {
+        font-size: 13px;
+        letter-spacing: 2.5px;
+    }
+}
+
+/* Desktop (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+    .e404-logo .logo-text span {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .e404-logo .logo-text span {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+    }
+}
+
+/* Tablet Portrait (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .e404-logo .logo-text span {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* Mobile Large (481px - 575px) */
+@media (min-width: 481px) and (max-width: 575px) {
+    .e404-logo .logo-text span {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .e404-logo .logo-text span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 319px) {
+    .e404-logo .logo-text span {
+        font-size: 7px;
+        letter-spacing: 0.8px;
+    }
 }
 
 .e404-corner-actions{

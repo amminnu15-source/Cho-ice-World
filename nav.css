@@ -91,8 +91,8 @@ img{
 }
 
 .header.sticky .navbar{
-    padding:10px 50px;
-    min-height:62px;
+    padding:14px 50px;
+    min-height:70px;
 }
 
 
@@ -319,235 +319,632 @@ object-fit:contain;
 
 
 
-@media(max-width:1200px){
-    .nav-menu{
-        gap:24px;
-    }
-    .navbar{
-        padding:14px 30px;
-    }
-    .header.sticky .navbar{
-        padding:10px 30px;
-    }
+
+
+
+
+/* Hide mobile login on desktop */
+.mobile-login{
+    display:none;
 }
 
-@media(max-width:1100px){
-    .navbar{
-        padding:12px 24px;
-        min-height:64px;
-    }
+
+
+
+
+/* ===========================
+   TABLET (991px)
+=========================== */
+@media (max-width:991px){
+
+.header .container{
+    width:100%;
+}
+
+.navbar{
+    padding:14px 20px;
+    min-height:75px;
+}
+
+.logo img{
+    width:58px;
+    height:58px;
+}
+
+.logo-text h2{
+    font-size:1.5rem;
+}
+
+.logo-text span{
+    font-size:10px;
+    letter-spacing:1px;
+}
+
+/* Hide desktop login */
+.login-btn{
+    display:none;
+}
+
+/* Show hamburger */
+.hamburger{
+    display:flex;
+}
+
+/* Mobile login inside menu */
+.mobile-login{
+    display:block;
+}
+
+/* Navigation */
+
+.nav-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:320px;
+    max-width:85%;
+    height:100vh;
+    background:var(--white);
+    box-shadow:-10px 0 30px rgba(0,0,0,.12);
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding:100px 25px 40px;
+    overflow-y:auto;
+    transition:.4s ease;
+    z-index:9999;
+}
+
+.nav-menu.active{
+    right:0;
+}
+
+.nav-menu li{
+    width:100%;
+}
+
+.nav-menu li a{
+    width:100%;
+    padding:16px 0;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+}
+
+.nav-menu li a::after{
+    display:none;
+}
+
+/* Dropdown */
+
+.dropdown-menu{
+    position:static;
+    width:100%;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    display:none;
+    box-shadow:none;
+    border:none;
+    background:transparent;
+    padding:5px 0 10px;
+    margin-left:15px;
+}
+
+.dropdown.active .dropdown-menu{
+    display:block;
+}
+
+.dropdown-menu li a{
+    font-size:14px;
+    padding:12px 0;
+    border:none;
+}
+
+.dropdown-menu li a:hover{
+    background:none;
+    color:var(--primary);
+    padding-left:0;
+}
+
+/* Mobile Login */
+
+.mobile-login a{
+    margin-top:20px;
+    background:var(--primary);
+    color:#fff !important;
+    justify-content:center;
+    border-radius:50px;
+    padding:14px;
+    border:none !important;
+}
+
+.mobile-login a:hover{
+    background:var(--secondary);
+}
+
+/* Right Buttons */
+
+.nav-actions{
+    gap:8px;
+}
+
+.icon-btn{
+    width:40px;
+    height:40px;
+    font-size:14px;
+}
+
+}
+
+
+/* ===========================
+   MOBILE (767px)
+=========================== */
+
+@media (max-width:767px){
+
+.navbar{
+    padding:12px 15px;
+}
+
+.logo{
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.logo-text h2{
+    font-size:1.25rem;
+}
+
+.logo-text span{
+    display:none;
+}
+
+.nav-menu{
+    width:280px;
+    padding:90px 20px 30px;
+}
+
+.icon-btn{
+    width:38px;
+    height:38px;
+}
+
+.hamburger{
+    width:38px;
+    height:38px;
+}
+
+.hamburger span{
+    width:24px;
+}
+
+}
+
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+.navbar{
+    padding:10px 12px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo-text h2{
+    font-size:1.1rem;
+}
+
+.icon-btn{
+    width:36px;
+    height:36px;
+    font-size:13px;
+}
+
+.hamburger{
+    width:36px;
+    height:36px;
+}
+
+.nav-actions{
+    gap:6px;
+}
+
+.nav-menu{
+    width:260px;
+}
+
+}
+
+
+
+
+/*=========================================
+ MOBILE & TABLET NAVBAR
+=========================================*/
+@media (max-width:991px){
+
+/* Header */
+.navbar{
+    padding:14px 18px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+}
+
+.logo-text h2{
+    font-size:1.4rem;
+}
+
+.logo-text span{
+    display:none;
+}
+
+/* Desktop Login Hide */
+.login-btn{
+    display:none;
+}
+
+/* Mobile Login Show */
+.mobile-login{
+    display:block;
+}
+
+/* Hamburger */
+.hamburger{
+    display:flex;
+    width:42px;
+    height:42px;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    z-index:10001;
+}
+
+.hamburger span{
+    width:24px;
+    height:3px;
+    background:var(--primary);
+    border-radius:20px;
+    transition:.35s ease;
+}
+
+/* Change ☰ into ✕ */
+.hamburger.active span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+/* Sidebar Menu */
+.nav-menu{
+    position:fixed;
+    top:82px;
+    right:-100%;
+    width:300px;
+    max-width:85%;
+    height:auto;
+    max-height:calc(100vh - 100px);
+    overflow-y:auto;
+
+    background:var(--white);
+
+    border-radius:20px 0 0 20px;
+
+    padding:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+
+    transition:.35s ease;
+
+    z-index:9999;
+}
+
+.nav-menu.active{
+    right:0;
+}
+
+/* Menu Links */
+.nav-menu li{
+    width:100%;
+}
+
+.nav-menu li a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    padding:15px 0;
+    border-bottom:1px solid var(--border);
+    font-size:16px;
+    font-weight:600;
+}
+
+.nav-menu li a::after{
+    display:none;
+}
+
+/* Dropdown */
+.dropdown-menu{
+    position:static;
+    display:none;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    width:100%;
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    padding:0 0 0 18px;
+}
+
+.dropdown.active .dropdown-menu{
+    display:block;
+}
+
+/* Mobile Login Button */
+/* Mobile Login */
+.mobile-login{
+    margin-top:20px;
+    width:100%;
+}
+
+.mobile-login a{
+    display:flex !important;
+    align-items:center;
+    justify-content:center !important;
+    gap:10px !important;
+
+    width:100%;
+    height:50px;
+    padding:0 20px;
+
+    background:var(--primary);
+    color:#fff !important;
+
+    border-radius:50px;
+
+    font-size:15px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    position:relative;
+}
+
+.mobile-login a i{
+    position:static !important;
+    margin:0 !important;
+    font-size:16px;
+    color:#fff;
+}
+
+}
+
+/*=========================================
+ SMALL MOBILE
+=========================================*/
+@media (max-width:576px){
+
+.logo img{
+    width:48px;
+    height:48px;
+}
+
+.logo-text h2{
+    font-size:1.2rem;
+}
+
+.nav-menu{
+    width:270px;
+}
+
+.icon-btn{
+    width:38px;
+    height:38px;
+}
+
+.hamburger{
+    width:38px;
+    height:38px;
+}
+
+}
+
+
+
+/*=========================================
+ FIX STICKY NAV SIZE
+=========================================*/
+
+.header.sticky .navbar{
+    padding:14px 50px !important;
+    min-height:85px !important;
+}
+
+.header.sticky .logo img{
+    width:72px !important;
+    height:72px !important;
+}
+
+/* Tablet */
+@media (max-width:991px){
 
     .header.sticky .navbar{
-        padding:10px 24px;
-        min-height:58px;
+        padding:14px 18px !important;
+        min-height:75px !important;
     }
 
-    .nav-menu{
-        position:fixed;
-        top:74px;
-        left:-100%;
-        width:300px;
-        max-width:80%;
-        height:calc(100vh - 74px);
-        background:var(--white);
-        flex-direction:column;
-        align-items:flex-start;
-        padding:26px;
-        gap:6px;
-        box-shadow:var(--shadow);
-        transition:.4s;
-        overflow:auto;
-        z-index:998;
+    .header.sticky .logo img{
+        width:55px !important;
+        height:55px !important;
     }
 
-    .nav-menu.active{
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    .header.sticky .navbar{
+        padding:12px !important;
+        min-height:70px !important;
+    }
+
+    .header.sticky .logo img{
+        width:48px !important;
+        height:48px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*=========================================
+  FINAL MOBILE & TABLET NAV FIX
+=========================================*/
+
+@media (max-width:991px){
+
+    /* Don't resize while scrolling */
+    .header,
+    .header.sticky{
+        top:0;
         left:0;
-    }
-
-    .nav-menu li{
         width:100%;
     }
 
-    .nav-menu li a{
-        width:100%;
-        padding:14px 0;
+    .navbar,
+    .header.sticky .navbar{
+        height:74px !important;
+        min-height:74px !important;
+        padding:0 16px !important;
+
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
     }
 
-    .nav-menu>li>a::after{
+    /* Left Logo */
+    .logo{
+        flex:1;
+        min-width:0;
+        gap:10px;
+    }
+
+    .logo img,
+    .header.sticky .logo img{
+        width:52px !important;
+        height:52px !important;
+        flex-shrink:0;
+    }
+
+    .logo-text h2{
+        font-size:1.55rem !important;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .logo-text span{
         display:none;
     }
 
-    .dropdown-menu{
-        position:static;
-        width:100%;
-        opacity:1;
-        visibility:visible;
-        transform:none;
-        display:none;
-        margin-top:8px;
-        box-shadow:none;
-        border:1px solid var(--border);
+    /* Right Buttons */
+    .nav-actions{
+        flex-shrink:0;
+        display:flex;
+        align-items:center;
+        gap:8px;
     }
 
-    .dropdown.active .dropdown-menu{
-        display:block;
+    .icon-btn,
+    .hamburger{
+        width:40px;
+        height:40px;
     }
 
     .hamburger{
         display:flex;
+        align-items:center;
+        justify-content:center;
     }
 
-    .login-btn{
-        display:none;
-    }
-}
-
-@media(max-width:992px){
-    .logo img{
-        width:48px;
-        height:48px;
-    }
-
-    .header.sticky .logo img{
-        width:42px;
-        height:42px;
-    }
-
-    .logo-text h2{
-        font-size:1.6rem;
+    /* Sidebar below navbar */
+    .nav-menu{
+        top:74px !important;
+        height:calc(100vh - 74px);
+        max-height:none;
     }
 }
 
-@media(max-width:768px){
-    .navbar{
-        padding:10px 20px;
-        min-height:58px;
-    }
+/* Small Phones */
 
+@media (max-width:480px){
+
+    .navbar,
     .header.sticky .navbar{
-        padding:8px 20px;
-        min-height:52px;
+        padding:0 12px !important;
+        height:68px !important;
+        min-height:68px !important;
     }
 
-    .logo img{
-        width:44px;
-        height:44px;
-    }
-
-    .header.sticky .logo img{
-        width:38px;
-        height:38px;
-    }
-
-    .logo-text h2{
-        font-size:1.4rem;
-    }
-
-    .logo-text span{
-        font-size:10px;
-    }
-
-    #rtlBtn{
-        display:none;
-    }
-
-    .icon-btn{
-        width:40px;
-        height:40px;
-    }
-}
-
-@media(max-width:576px){
     .logo{
         gap:8px;
     }
 
-    .logo img{
-        width:38px;
-        height:38px;
-    }
-
+    .logo img,
     .header.sticky .logo img{
-        width:34px;
-        height:34px;
+        width:46px !important;
+        height:46px !important;
     }
 
     .logo-text h2{
-        font-size:1.2rem;
+        font-size:1.2rem !important;
     }
 
-    .logo-text span{
-        display:none;
-    }
-
-    .nav-actions{
-        gap:6px;
-    }
-
-    .icon-btn{
-        width:38px;
-        height:38px;
-        font-size:14px;
-    }
-
+    .icon-btn,
     .hamburger{
-        width:38px;
-        height:38px;
-    }
-}
-
-@media(max-width:400px){
-    .navbar{
-        padding:8px 14px;
+        width:36px;
+        height:36px;
     }
 
-    .logo img{
-        width:34px;
-        height:34px;
+    .nav-menu{
+        top:68px !important;
+        height:calc(100vh - 68px);
     }
-
-    .logo-text h2{
-        font-size:1.05rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-}
-
-.navbar{
-    min-height:72px !important;
-    padding:12px 50px !important;
-    transition:background .35s ease,
-               box-shadow .35s ease;
-}
-
-.header.sticky .navbar{
-    min-height:72px !important;
-    padding:12px 50px !important;
-}
-
-
-.logo img{
-    width:72px;
-    height:72px;
-    transition:transform .35s ease;
-}
-
-.header.sticky .logo img{
-    width:72px;
-    height:72px;
 }

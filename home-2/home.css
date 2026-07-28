@@ -4333,3 +4333,295 @@ background:var(--primary);;
 #seasonal{
     scroll-margin-top:90px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================
+   RESPONSIVE ENHANCEMENTS — Tablet, Mobile & Nest Hub
+   ======================================================== */
+
+/* 1. Prevent accidental horizontal scroll */
+html, body{ overflow-x:hidden; }
+
+/* 2. Tablet landscape / iPad / Nest Hub (1024px) grid fixes
+      (existing 992px rules only kicked in below 992px,
+      leaving 1024px devices squeezed into 4 columns) */
+@media (max-width:1024px){
+  .combo-grid{ grid-template-columns:1fr 1fr; }
+  .seasonal-grid{ grid-template-columns:1fr 1fr; }
+}
+
+/* 3. Nest Hub (1024x600) & other short-height landscape screens —
+      100vh hero was too tall for the visible viewport */
+@media (min-width:850px) and (max-height:700px){
+  .hero-two{ min-height:auto; padding:110px 0 60px; }
+  .flavours{ min-height:auto; padding:60px 0; }
+}
+
+/* 4. Chef section — stack on tablet & mobile (had no responsive rules at all) */
+@media (max-width:992px){
+  .chef-wrapper{ grid-template-columns:1fr; gap:50px; text-align:center; }
+  .chef-content{ align-items:center; }
+  .chef-features{ align-items:center; }
+  .chef-features li{ justify-content:center; }
+  .chef-image{ max-width:460px; margin:0 auto; }
+}
+
+@media (max-width:576px){
+  .chef-content h2{ font-size:1.9rem; }
+  .chef-badge{ left:14px; bottom:14px; padding:10px 18px; font-size:13px; }
+  .chef-btn{ width:100%; justify-content:center; }
+}
+
+/* 5. Flavour circle — scale down for tablets, switch to a clean grid on mobile
+      (had no responsive rules at all — was overflowing/clipped below ~800px) */
+@media (max-width:1024px){
+  .flavour-circle{ width:600px; height:600px; }
+  .center-cone{ width:170px; }
+  .flavour-item{ width:110px; }
+  .flavour-img{ width:92px; height:92px; }
+  .flavour-item h4{ font-size:14px; margin-top:10px; }
+  .chocolate{ top:12px; }
+  .vanilla{ top:75px; left:65px; }
+  .strawberry{ top:75px; right:65px; }
+  .mango{ top:245px; left:-5px; }
+  .oreo{ top:245px; right:-5px; }
+  .blueberry{ bottom:75px; left:65px; }
+  .butter{ bottom:75px; right:65px; }
+  .forest{ bottom:12px; }
+}
+
+@media (max-width:768px){
+  .flavour-circle{
+      width:100%;
+      height:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:32px 16px;
+      justify-items:center;
+  }
+  .center-cone{
+      position:static;
+      grid-column:1 / -1;
+      width:130px;
+      margin:0 auto 10px;
+  }
+  .center-cone.zoom-in{ transform:scale(.8); }
+  .center-cone.zoom-in.show{ transform:scale(1); }
+  .flavour-item{
+      position:static;
+      width:100%;
+  }
+  .chocolate, .forest{ transform:none; }
+  .flavour-img{ width:82px; height:82px; }
+  .flavour-item h4{ font-size:13px; margin-top:8px; }
+}
+
+@media (max-width:480px){
+  .flavour-circle{ grid-template-columns:repeat(2,1fr); gap:26px 14px; }
+  .flavour-img{ width:76px; height:76px; }
+}
+
+/* 6. Mini CTA on small screens — fixed 300px height was cramped */
+@media (max-width:480px){
+  .mini-cta{ height:auto; padding:60px 20px; }
+  .mini-cta h2{ font-size:1.7rem; }
+}
+
+/* 7. Very small phones (iPhone SE etc.) */
+@media (max-width:360px){
+  .hero-title{ font-size:1.85rem; }
+  .btn-primary, .btn-outline{ padding:14px 22px; font-size:14px; }
+  .shop-content h3{ font-size:22px; }
+}
+
+
+
+
+
+
+
+
+/* ============================================
+   FIX: Back-to-top button overlapping "Add" buttons
+   on Seasonal & Combo cards (mobile/tablet)
+   ============================================ */
+
+#backToTop.back-to-top,
+.back-to-top {
+    position: fixed !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    width: 46px !important;
+    height: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background: var(--primary) !important;
+    color: #fff !important;
+    box-shadow: 0 10px 24px rgba(0,0,0,.28) !important;
+    z-index: 900 !important;   /* above cards, below toasts(1000) & popups(99999) */
+    opacity: .92;
+    transition: .3s ease;
+}
+
+#backToTop.back-to-top:hover,
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* Give the last row of these grids breathing room so the fixed
+   button doesn't sit directly on top of the Add / Add Combo buttons */
+@media (max-width:768px){
+    .combo-grid,
+    .seasonal-grid {
+        padding-bottom: 55px;
+    }
+
+    #backToTop.back-to-top,
+    .back-to-top {
+        width: 42px !important;
+        height: 42px !important;
+        right: 14px !important;
+        bottom: 14px !important;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+@media (max-width:700px){
+    .combo-grid,
+    .seasonal-grid{
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .combo-card,
+    .seasonal-card{
+        width: 100%;
+    }
+
+    .combo-img-wrap,
+    .seasonal-img-wrap{
+        height: 220px;
+    }
+}
+
+
+
+/* ============================================
+   Hero image visibility + whitespace fix (mobile/tablet)
+   ============================================ */
+@media (max-width:992px){
+    .hero-two{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,250,248,.35) 0%,
+                rgba(255,250,248,.55) 45%,
+                rgba(255,250,248,.88) 100%
+            ),
+            url("/images/home2-hero.png") center 25%/cover no-repeat;
+    }
+
+    body.dark .hero-two{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(17,17,17,.35) 0%,
+                rgba(17,17,17,.55) 45%,
+                rgba(17,17,17,.85) 100%
+            ),
+            url("/images/home2-hero.png") center 25%/cover no-repeat;
+    }
+}
+
+@media (max-width:768px){
+    .hero-two{
+        min-height:auto;
+        padding:130px 0 70px;
+    }
+}
+
+@media (max-width:576px){
+    .hero-two{
+        min-height:auto;
+        padding:120px 0 60px;
+    }
+}
+
+
+
+/* ============================================
+   Hero: fix badge readability + reduce bottom
+   "empty box" feel on mobile
+   ============================================ */
+@media (max-width:992px){
+
+    /* Give the badge a solid, always-readable pill instead of
+       relying on the photo behind it */
+    .hero-badge{
+        background: rgba(255,255,255,.95) !important;
+        box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+
+    body.dark .hero-badge{
+        background: rgba(20,20,20,.9) !important;
+    }
+
+    /* Let the photo stay visible a bit longer instead of
+       fading to near-solid cream by the bottom */
+    .hero-two{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,250,248,.30) 0%,
+                rgba(255,250,248,.55) 55%,
+                rgba(255,250,248,.72) 100%
+            ),
+            url("/images/home2-hero.png") center 25%/cover no-repeat;
+    }
+
+    body.dark .hero-two{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(17,17,17,.30) 0%,
+                rgba(17,17,17,.55) 55%,
+                rgba(17,17,17,.70) 100%
+            ),
+            url("/images/home2-hero.png") center 25%/cover no-repeat;
+    }
+}
+
+@media (max-width:768px){
+    .hero-two{ padding: 120px 0 45px; }
+    .hero-two-content{ margin-bottom: 0; }
+    .hero-desc{ margin-bottom: 22px; }
+}
+
+@media (max-width:576px){
+    .hero-two{ padding: 110px 0 40px; }
+}
