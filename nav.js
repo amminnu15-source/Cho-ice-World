@@ -232,48 +232,38 @@ rtlBtn.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const currentPath = window.location.pathname.toLowerCase();
+    const currentPage = window.location.pathname.split("/").pop();
 
     document.querySelectorAll(".nav-menu > li > a").forEach(link => {
 
-        const href = link.getAttribute("href").toLowerCase();
+        const linkPage = link.getAttribute("href").split("/").pop();
 
         link.classList.remove("active");
 
         // Home
-        if ((currentPath === "/" || currentPath.endsWith("/index.html")) && href === "/index.html") {
+        if (
+            (currentPage === "" || currentPage === "index.html") &&
+            linkPage === "index.html"
+        ) {
             link.classList.add("active");
         }
 
-        // About
-        else if (currentPath.endsWith("/about/about.html") && href === "/about/about.html") {
+        // Home Modern
+        else if (
+            currentPage === "home-2.html" &&
+            linkPage === "index.html"
+        ) {
             link.classList.add("active");
         }
 
-        // Services
-        else if (currentPath.endsWith("/services.html") && href === "/services.html") {
-            link.classList.add("active");
-        }
-
-        // Pricing
-        else if (currentPath.endsWith("/pricing/pricing.html") && href === "/pricing/pricing.html") {
-            link.classList.add("active");
-        }
-
-        // Blog
-        else if (currentPath.endsWith("/blog.html") && href === "/blog.html") {
-            link.classList.add("active");
-        }
-
-        // Contact
-        else if (currentPath.endsWith("/contact/contact.html") && href === "/contact/contact.html") {
+        // Other Pages
+        else if (currentPage === linkPage) {
             link.classList.add("active");
         }
 
     });
 
 });
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
