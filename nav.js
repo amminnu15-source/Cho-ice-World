@@ -276,8 +276,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const navMenu = document.querySelector(".nav-menu");
