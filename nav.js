@@ -230,58 +230,49 @@ rtlBtn.addEventListener("click", () => {
    ACTIVE MENU
 ========================================== */
 
-const path = window.location.pathname.toLowerCase();
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelectorAll(".nav-menu > li > a").forEach(link => {
+    const currentPath = window.location.pathname.toLowerCase();
 
-    const href = link.getAttribute("href").toLowerCase();
+    document.querySelectorAll(".nav-menu > li > a").forEach(link => {
 
-    link.classList.remove("active");
+        const href = link.getAttribute("href").toLowerCase();
 
-    if (
-        (path.endsWith("/index.html") || path === "/") &&
-        href === "index.html"
-    ) {
-        link.classList.add("active");
-    }
+        link.classList.remove("active");
 
-    else if (
-        path.includes("/about/about.html") &&
-        href === "/about/about.html"
-    ) {
-        link.classList.add("active");
-    }
+        // Home
+        if ((currentPath === "/" || currentPath.endsWith("/index.html")) && href === "/index.html") {
+            link.classList.add("active");
+        }
 
-    else if (
-        path.endsWith("/services.html") &&
-        href === "services.html"
-    ) {
-        link.classList.add("active");
-    }
+        // About
+        else if (currentPath.endsWith("/about/about.html") && href === "/about/about.html") {
+            link.classList.add("active");
+        }
 
-    else if (
-        path.includes("/pricing/pricing.html") &&
-        href === "/pricing/pricing.html"
-    ) {
-        link.classList.add("active");
-    }
+        // Services
+        else if (currentPath.endsWith("/services.html") && href === "/services.html") {
+            link.classList.add("active");
+        }
 
-    else if (
-        path.endsWith("/blog.html") &&
-        href === "blog.html"
-    ) {
-        link.classList.add("active");
-    }
+        // Pricing
+        else if (currentPath.endsWith("/pricing/pricing.html") && href === "/pricing/pricing.html") {
+            link.classList.add("active");
+        }
 
-    else if (
-        path.includes("/contact/contact.html") &&
-        href === "/contact/contact.html"
-    ) {
-        link.classList.add("active");
-    }
+        // Blog
+        else if (currentPath.endsWith("/blog.html") && href === "/blog.html") {
+            link.classList.add("active");
+        }
+
+        // Contact
+        else if (currentPath.endsWith("/contact/contact.html") && href === "/contact/contact.html") {
+            link.classList.add("active");
+        }
+
+    });
+
 });
-
-
 
 
 
