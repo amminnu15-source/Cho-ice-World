@@ -148,9 +148,7 @@ body.dark .pp-breadcrumb{ color:#a8a8a8; }
 .pp-breadcrumb a{ color:#ff6b8b; font-weight:600; }
 .pp-breadcrumb i{ font-size:9px; }
 
-/*=========================
-CONTENT LAYOUT
-==========================*/
+
 
 .pp-content{ padding:70px 0 100px; }
 
@@ -161,9 +159,7 @@ CONTENT LAYOUT
     align-items:start;
 }
 
-/*=========================
-TABLE OF CONTENTS
-==========================*/
+
 
 .pp-toc{
     position:sticky;
@@ -210,9 +206,7 @@ body.dark .pp-toc a{ color:#b8b8b8; }
     border-left-color:#ff6b8b;
 }
 
-/*=========================
-BODY CONTENT
-==========================*/
+
 
 .pp-body{ max-width:720px; }
 
@@ -283,9 +277,7 @@ body.dark .pp-section ul li strong{ color:#ffffff; }
 .pp-contact-list li::before{ content:none; }
 .pp-contact-list li i{ color:#ff6b8b; width:16px; }
 
-/*=========================
-RTL
-==========================*/
+
 
 html[dir="rtl"] .pp-toc a{ border-left:none; border-right:2px solid transparent; }
 html[dir="rtl"] .pp-toc a.active{ border-right-color:#ff6b8b; }
@@ -293,9 +285,6 @@ html[dir="rtl"] .pp-section ul li{ padding-left:0; padding-right:22px; }
 html[dir="rtl"] .pp-section ul li::before{ left:auto; right:0; }
 html[dir="rtl"] .pp-contact-list li{ padding-left:0; padding-right:26px; }
 
-/*=========================================
-RESPONSIVE
-=========================================*/
 
 @media(max-width:992px){
     .pp-layout{ grid-template-columns:1fr; }

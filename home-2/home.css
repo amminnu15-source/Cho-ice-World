@@ -4337,43 +4337,19 @@ background:var(--primary);;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========================================================
-   RESPONSIVE ENHANCEMENTS — Tablet, Mobile & Nest Hub
-   ======================================================== */
-
-/* 1. Prevent accidental horizontal scroll */
 html, body{ overflow-x:hidden; }
 
-/* 2. Tablet landscape / iPad / Nest Hub (1024px) grid fixes
-      (existing 992px rules only kicked in below 992px,
-      leaving 1024px devices squeezed into 4 columns) */
 @media (max-width:1024px){
   .combo-grid{ grid-template-columns:1fr 1fr; }
   .seasonal-grid{ grid-template-columns:1fr 1fr; }
 }
 
-/* 3. Nest Hub (1024x600) & other short-height landscape screens —
-      100vh hero was too tall for the visible viewport */
 @media (min-width:850px) and (max-height:700px){
   .hero-two{ min-height:auto; padding:110px 0 60px; }
   .flavours{ min-height:auto; padding:60px 0; }
 }
 
-/* 4. Chef section — stack on tablet & mobile (had no responsive rules at all) */
+
 @media (max-width:992px){
   .chef-wrapper{ grid-template-columns:1fr; gap:50px; text-align:center; }
   .chef-content{ align-items:center; }
@@ -4388,8 +4364,7 @@ html, body{ overflow-x:hidden; }
   .chef-btn{ width:100%; justify-content:center; }
 }
 
-/* 5. Flavour circle — scale down for tablets, switch to a clean grid on mobile
-      (had no responsive rules at all — was overflowing/clipped below ~800px) */
+
 @media (max-width:1024px){
   .flavour-circle{ width:600px; height:600px; }
   .center-cone{ width:170px; }
@@ -4437,13 +4412,13 @@ html, body{ overflow-x:hidden; }
   .flavour-img{ width:76px; height:76px; }
 }
 
-/* 6. Mini CTA on small screens — fixed 300px height was cramped */
+
 @media (max-width:480px){
   .mini-cta{ height:auto; padding:60px 20px; }
   .mini-cta h2{ font-size:1.7rem; }
 }
 
-/* 7. Very small phones (iPhone SE etc.) */
+
 @media (max-width:360px){
   .hero-title{ font-size:1.85rem; }
   .btn-primary, .btn-outline{ padding:14px 22px; font-size:14px; }
@@ -4454,13 +4429,6 @@ html, body{ overflow-x:hidden; }
 
 
 
-
-
-
-/* ============================================
-   FIX: Back-to-top button overlapping "Add" buttons
-   on Seasonal & Combo cards (mobile/tablet)
-   ============================================ */
 
 #backToTop.back-to-top,
 .back-to-top {
@@ -4487,8 +4455,7 @@ html, body{ overflow-x:hidden; }
     transform: translateY(-3px);
 }
 
-/* Give the last row of these grids breathing room so the fixed
-   button doesn't sit directly on top of the Add / Add Combo buttons */
+
 @media (max-width:768px){
     .combo-grid,
     .seasonal-grid {
@@ -4530,10 +4497,6 @@ html, body{ overflow-x:hidden; }
 }
 
 
-
-/* ============================================
-   Hero image visibility + whitespace fix (mobile/tablet)
-   ============================================ */
 @media (max-width:992px){
     .hero-two{
         background:
@@ -4572,16 +4535,9 @@ html, body{ overflow-x:hidden; }
     }
 }
 
-
-
-/* ============================================
-   Hero: fix badge readability + reduce bottom
-   "empty box" feel on mobile
-   ============================================ */
 @media (max-width:992px){
 
-    /* Give the badge a solid, always-readable pill instead of
-       relying on the photo behind it */
+
     .hero-badge{
         background: rgba(255,255,255,.95) !important;
         box-shadow: 0 4px 14px rgba(0,0,0,.08);
@@ -4591,8 +4547,7 @@ html, body{ overflow-x:hidden; }
         background: rgba(20,20,20,.9) !important;
     }
 
-    /* Let the photo stay visible a bit longer instead of
-       fading to near-solid cream by the bottom */
+
     .hero-two{
         background:
             linear-gradient(

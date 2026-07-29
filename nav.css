@@ -323,18 +323,12 @@ object-fit:contain;
 
 
 
-/* Hide mobile login on desktop */
 .mobile-login{
     display:none;
 }
 
 
 
-
-
-/* ===========================
-   TABLET (991px)
-=========================== */
 @media (max-width:991px){
 
 .header .container{
@@ -360,22 +354,22 @@ object-fit:contain;
     letter-spacing:1px;
 }
 
-/* Hide desktop login */
+
 .login-btn{
     display:none;
 }
 
-/* Show hamburger */
+
 .hamburger{
     display:flex;
 }
 
-/* Mobile login inside menu */
+
 .mobile-login{
     display:block;
 }
 
-/* Navigation */
+
 
 .nav-menu{
     position:fixed;
@@ -418,7 +412,7 @@ object-fit:contain;
     display:none;
 }
 
-/* Dropdown */
+
 
 .dropdown-menu{
     position:static;
@@ -450,7 +444,7 @@ object-fit:contain;
     padding-left:0;
 }
 
-/* Mobile Login */
+
 
 .mobile-login a{
     margin-top:20px;
@@ -466,7 +460,6 @@ object-fit:contain;
     background:var(--secondary);
 }
 
-/* Right Buttons */
 
 .nav-actions{
     gap:8px;
@@ -480,10 +473,6 @@ object-fit:contain;
 
 }
 
-
-/* ===========================
-   MOBILE (767px)
-=========================== */
 
 @media (max-width:767px){
 
@@ -530,9 +519,7 @@ object-fit:contain;
 }
 
 
-/* ===========================
-   SMALL MOBILE
-=========================== */
+
 
 @media (max-width:480px){
 
@@ -573,12 +560,10 @@ object-fit:contain;
 
 
 
-/*=========================================
- MOBILE & TABLET NAVBAR
-=========================================*/
+
 @media (max-width:991px){
 
-/* Header */
+
 .navbar{
     padding:14px 18px;
 }
@@ -596,17 +581,17 @@ object-fit:contain;
     display:none;
 }
 
-/* Desktop Login Hide */
+
 .login-btn{
     display:none;
 }
 
-/* Mobile Login Show */
+
 .mobile-login{
     display:block;
 }
 
-/* Hamburger */
+
 .hamburger{
     display:flex;
     width:42px;
@@ -640,7 +625,6 @@ object-fit:contain;
     transform:translateY(-8px) rotate(-45deg);
 }
 
-/* Sidebar Menu */
 .nav-menu{
     position:fixed;
     top:82px;
@@ -673,7 +657,7 @@ object-fit:contain;
     right:0;
 }
 
-/* Menu Links */
+
 .nav-menu li{
     width:100%;
 }
@@ -693,7 +677,7 @@ object-fit:contain;
     display:none;
 }
 
-/* Dropdown */
+
 .dropdown-menu{
     position:static;
     display:none;
@@ -711,8 +695,7 @@ object-fit:contain;
     display:block;
 }
 
-/* Mobile Login Button */
-/* Mobile Login */
+
 .mobile-login{
     margin-top:20px;
     width:100%;
@@ -750,9 +733,7 @@ object-fit:contain;
 
 }
 
-/*=========================================
- SMALL MOBILE
-=========================================*/
+
 @media (max-width:576px){
 
 .logo img{
@@ -782,9 +763,6 @@ object-fit:contain;
 
 
 
-/*=========================================
- FIX STICKY NAV SIZE
-=========================================*/
 
 .header.sticky .navbar{
     padding:14px 50px !important;
@@ -796,7 +774,7 @@ object-fit:contain;
     height:72px !important;
 }
 
-/* Tablet */
+
 @media (max-width:991px){
 
     .header.sticky .navbar{
@@ -811,7 +789,7 @@ object-fit:contain;
 
 }
 
-/* Mobile */
+
 @media (max-width:576px){
 
     .header.sticky .navbar{
@@ -834,13 +812,10 @@ object-fit:contain;
 
 
 
-/*=========================================
-  FINAL MOBILE & TABLET NAV FIX
-=========================================*/
 
 @media (max-width:991px){
 
-    /* Don't resize while scrolling */
+
     .header,
     .header.sticky{
         top:0;
@@ -859,7 +834,7 @@ object-fit:contain;
         justify-content:space-between;
     }
 
-    /* Left Logo */
+
     .logo{
         flex:1;
         min-width:0;
@@ -884,7 +859,7 @@ object-fit:contain;
         display:none;
     }
 
-    /* Right Buttons */
+
     .nav-actions{
         flex-shrink:0;
         display:flex;
@@ -904,7 +879,7 @@ object-fit:contain;
         justify-content:center;
     }
 
-    /* Sidebar below navbar */
+
     .nav-menu{
         top:74px !important;
         height:calc(100vh - 74px);
@@ -912,7 +887,7 @@ object-fit:contain;
     }
 }
 
-/* Small Phones */
+
 
 @media (max-width:480px){
 
@@ -946,5 +921,76 @@ object-fit:contain;
     .nav-menu{
         top:68px !important;
         height:calc(100vh - 68px);
+    }
+}
+
+
+
+.navbar,
+.header.sticky .navbar{
+    min-height: 64px !important;
+    padding: 8px 40px !important;
+}
+
+.logo img,
+.header.sticky .logo img{
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.icon-btn,
+.login-btn{
+    height: 40px;
+}
+
+.icon-btn{
+    width: 40px;
+}
+
+
+@media (max-width:991px){
+    .navbar,
+    .header.sticky .navbar{
+        height: 66px !important;
+        min-height: 66px !important;
+        padding: 0 16px !important;
+    }
+
+    .logo img,
+    .header.sticky .logo img{
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .nav-menu{
+        top: 66px !important;
+        height: calc(100vh - 66px);
+    }
+}
+
+
+@media (max-width:480px){
+    .navbar,
+    .header.sticky .navbar{
+        height: 60px !important;
+        min-height: 60px !important;
+        padding: 0 12px !important;
+    }
+
+    .logo img,
+    .header.sticky .logo img{
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .icon-btn,
+    .hamburger{
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-menu{
+        top: 60px !important;
+        height: calc(100vh - 60px);
     }
 }

@@ -1,10 +1,8 @@
-// ==========================
-// 404 Page — Interactivity
-// ==========================
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ---------- Dark Mode ---------- */
+
     const themeBtn = document.getElementById('themeBtn');
     const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
 
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- RTL / LTR ---------- */
+  
     const rtlBtn = document.getElementById('rtlBtn');
 
     if (rtlBtn) {

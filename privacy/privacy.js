@@ -1,10 +1,7 @@
-// ==========================
-// Privacy Policy — Interactivity
-// ==========================
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ---------- Dark Mode ---------- */
     const themeBtn = document.getElementById('themeBtn');
     const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
 
@@ -32,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- RTL / LTR ---------- */
+
     const rtlBtn = document.getElementById('rtlBtn');
 
     if (rtlBtn) {
@@ -60,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- Smooth scroll for TOC links ---------- */
+  
     const tocLinks = document.querySelectorAll('#ppToc a');
 
     tocLinks.forEach(link => {
@@ -75,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    /* ---------- Scroll-spy: highlight active TOC link ---------- */
+  
     const sections = document.querySelectorAll('.pp-section[id]');
 
     if ('IntersectionObserver' in window && sections.length && tocLinks.length) {

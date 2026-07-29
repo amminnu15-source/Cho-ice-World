@@ -1,10 +1,6 @@
-// ==========================
-// Coming Soon — Interactivity
-// ==========================
-
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ---------- Dark Mode ---------- */
+  
     const themeBtn = document.getElementById('themeBtn');
     const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
 
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- RTL / LTR ---------- */
     const rtlBtn = document.getElementById('rtlBtn');
 
     if (rtlBtn) {
@@ -60,10 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- Countdown ---------- */
-    // Counts down to 30 days from page load — replace with a fixed
-    // launch date once you have one, e.g.:
-    // const launchDate = new Date('2026-09-01T00:00:00');
+
     const launchDate = new Date();
     launchDate.setDate(launchDate.getDate() + 30);
 
@@ -100,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setInterval(updateCountdown, 1000);
     }
 
-    /* ---------- Notify form + toast ---------- */
+    
     const form = document.getElementById('csForm');
     const toast = document.getElementById('csToast');
     const toastClose = document.getElementById('csToastClose');
@@ -113,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const emailInput = form.querySelector('input[type="email"]');
             if (!emailInput || !emailInput.value.trim()) return;
 
-            // Swap this for a real newsletter signup request when ready.
+          
             if (toast) {
                 toast.classList.add('show');
                 clearTimeout(toastTimer);
