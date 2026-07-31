@@ -131,7 +131,6 @@ Login
 </div>
 
 </header>
-
     <main>
         
         <section class="detail-hero">
@@ -207,21 +206,61 @@ Login
         
         <section class="magazine-article-section">
             <div class="container">
-                <article class="magazine-layout">
-                    
-                    <div class="article-cover-card">
-                        <img src="images/blog-flavours.png" id="articleCoverImg" alt="Article Cover Image">
-                        <div class="cover-caption">
-                            <i class="fa-solid fa-camera"></i>
-                            <span id="coverCaptionText">Artisanal dessert creation inside Cho'ice World kitchen.</span>
+                <div class="magazine-layout">
+
+                    <article class="article-main-col">
+
+                        <div class="article-cover-card">
+                            <img src="images/blog-flavours.png" id="articleCoverImg" alt="Article Cover Image">
+                            <div class="cover-caption">
+                                <i class="fa-solid fa-camera"></i>
+                                <span id="coverCaptionText">Artisanal dessert creation inside Cho'ice World kitchen.</span>
+                            </div>
                         </div>
-                    </div>
+
+
+                        <div class="article-body-content" id="articleBody">
+
+                        </div>
+                    </article>
 
                     
-                    <div class="article-body-content" id="articleBody">
-                        
-                    </div>
-                </article>
+                    <aside class="article-sidebar-col" id="blogSidebar">
+
+                        <div class="sidebar-widget sidebar-search-widget">
+                            <h4 class="widget-title">Search Articles</h4>
+                            <form class="sidebar-search-form" id="sidebarSearchForm">
+                                <input type="text" id="sidebarSearchInput" placeholder="Search blog posts...">
+                                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                            <div class="sidebar-search-results" id="sidebarSearchResults"></div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Categories</h4>
+                            <ul class="sidebar-category-list" id="sidebarCategories"></ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Recent Posts</h4>
+                            <div class="sidebar-recent-posts" id="sidebarRecentPosts"></div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Popular Tags</h4>
+                            <div class="sidebar-tag-cloud" id="sidebarTags"></div>
+                        </div>
+
+                        <div class="sidebar-widget sidebar-cta-widget">
+                            <i class="fa-solid fa-ice-cream"></i>
+                            <h4>Craving Something Sweet?</h4>
+                            <p>Order fresh handcrafted ice cream & milkshakes today.</p>
+                            <a href="Services.html" class="btn-primary">Order Now</a>
+                        </div>
+
+                    </aside>
+
+                </div>
             </div>
         </section>
 
@@ -280,8 +319,8 @@ Login
                 
                 <div class="detail-cta-banner">
                     <div class="banner-glass-content">
-                        <span class="banner-badge"><i class="fa-solid fa-store"></i> Sweet Cravings Calling?</span>
-                        <h2 class="banner-title">Visit Cho'ice <span>World</span> or Order Online Today!</h2>
+                  
+                       <h2 class="banner-title" id="ctaHeading">Visit Cho'ice <span>World</span> or Order Online Today!</h2>
                         <p class="banner-desc">
                             Taste our artisanal ice creams, hand-blended milkshakes, and signature sundaes prepared fresh daily.
                         </p>

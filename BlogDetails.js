@@ -535,6 +535,95 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const allBlogIds = Object.keys(BLOGS_DATA);
+
+  
+    const sidebarCategories = document.getElementById("sidebarCategories");
+    if (sidebarCategories) {
+        const catCounts = {};
+        allBlogIds.forEach(id => {
+            const cat = BLOGS_DATA[id].category;
+            catCounts[cat] = (catCounts[cat] || 0) + 1;
+        });
+        sidebarCategories.innerHTML = Object.keys(catCounts).map(cat => `
+            <li>
+                <a href="Blog.html?category=${encodeURIComponent(cat)}">
+                    <span>${cat}</span>
+                    <span class="cat-count">${catCounts[cat]}</span>
+                </a>
+            </li>
+        `).join("");
+    }
+
+    // Recent Posts (everything except the currently open article, newest first as listed)
+    const sidebarRecentPosts = document.getElementById("sidebarRecentPosts");
+    if (sidebarRecentPosts) {
+        const recentIds = allBlogIds.filter(id => id !== blogId).slice(0, 5);
+        sidebarRecentPosts.innerHTML = recentIds.map(id => {
+            const rd = BLOGS_DATA[id];
+            return `
+                <a class="recent-post-item" href="BlogDetails.html?blog=${id}">
+                    <div class="recent-post-thumb">
+                        <img src="${rd.coverImg}" alt="${rd.title}">
+                    </div>
+                    <div class="recent-post-info">
+                        <h5>${rd.title}</h5>
+                        <span><i class="fa-regular fa-calendar"></i> ${rd.date}</span>
+                    </div>
+                </a>
+            `;
+        }).join("");
+    }
+
+    // Tag cloud (unique tags across all posts)
+    const sidebarTags = document.getElementById("sidebarTags");
+    if (sidebarTags) {
+        const tagSet = new Set();
+        allBlogIds.forEach(id => (BLOGS_DATA[id].tags || []).forEach(t => tagSet.add(t)));
+        sidebarTags.innerHTML = Array.from(tagSet).map(tag => `
+            <a href="Blog.html?tag=${encodeURIComponent(tag)}">#${tag}</a>
+        `).join("");
+    }
+
+    // Sidebar live search (matches title, category & tags)
+    const sidebarSearchForm = document.getElementById("sidebarSearchForm");
+    const sidebarSearchInput = document.getElementById("sidebarSearchInput");
+    const sidebarSearchResults = document.getElementById("sidebarSearchResults");
+
+    function runSidebarSearch(query) {
+        if (!sidebarSearchResults) return;
+        const q = query.trim().toLowerCase();
+        if (!q) {
+            sidebarSearchResults.innerHTML = "";
+            return;
+        }
+        const matches = allBlogIds.filter(id => {
+            const d = BLOGS_DATA[id];
+            const haystack = [d.title, d.category, ...(d.tags || [])].join(" ").toLowerCase();
+            return haystack.includes(q);
+        });
+
+        if (matches.length === 0) {
+            sidebarSearchResults.innerHTML = `<span class="no-result">No articles found for "${query}"</span>`;
+            return;
+        }
+
+        sidebarSearchResults.innerHTML = matches.slice(0, 5).map(id => `
+            <a href="BlogDetails.html?blog=${id}">${BLOGS_DATA[id].title}</a>
+        `).join("");
+    }
+
+    if (sidebarSearchInput) {
+        sidebarSearchInput.addEventListener("input", (e) => runSidebarSearch(e.target.value));
+    }
+
+    if (sidebarSearchForm) {
+        sidebarSearchForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            runSidebarSearch(sidebarSearchInput.value);
+        });
+    }
+
     const commentForm = document.getElementById("commentForm");
     const commentMsg = document.getElementById("commentMsg");
 
