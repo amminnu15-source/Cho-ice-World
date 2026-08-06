@@ -612,7 +612,7 @@ object-fit:contain;
     transition:.35s ease;
 }
 
-/* Change ☰ into ✕ */
+
 .hamburger.active span:nth-child(1){
     transform:translateY(8px) rotate(45deg);
 }
