@@ -305,8 +305,11 @@ document.querySelectorAll(".dropdown-menu li a").forEach(subLink => {
     if ((currentPage === "" || currentPage === "index.html") && subPage === "index.html" && subLink.textContent.trim() === "Home Classic") {
         subLink.classList.add("active");
     }
-    else if (currentPage === "home-2.html" && subPage === "home-2.html") {
-        subLink.classList.add("active");
-    }
+   else if (
+    (currentPage === "home-2.html" || currentPage === "home-2") &&
+    linkPage === "index.html"
+) {
+    link.classList.add("active");
+}
 
 });

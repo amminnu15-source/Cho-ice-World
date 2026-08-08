@@ -997,8 +997,3 @@ object-fit:contain;
 
 
 
-.dropdown-menu li a.active{
-    color: var(--primary);
-    background: rgba(255,107,139,.08);
-    border-radius:10px;
-}
