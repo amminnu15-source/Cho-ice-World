@@ -994,3 +994,11 @@ object-fit:contain;
         height: calc(100vh - 60px);
     }
 }
+
+
+
+.dropdown-menu li a.active{
+    color: var(--primary);
+    background: rgba(255,107,139,.08);
+    border-radius:10px;
+}
