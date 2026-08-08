@@ -287,3 +287,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+
+
+
+
+
+document.querySelectorAll(".dropdown-menu li a").forEach(subLink => {
+
+    const subPage = subLink.getAttribute("href").split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop();
+
+    subLink.classList.remove("active");
+
+    if ((currentPage === "" || currentPage === "index.html") && subPage === "index.html" && subLink.textContent.trim() === "Home Classic") {
+        subLink.classList.add("active");
+    }
+    else if (currentPage === "home-2.html" && subPage === "home-2.html") {
+        subLink.classList.add("active");
+    }
+
+});
